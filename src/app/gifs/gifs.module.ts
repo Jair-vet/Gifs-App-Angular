@@ -11,6 +11,9 @@ import { HomePageComponent } from './pages/home/home-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HomePageComponent
   ]
 })
 export class GifsModule { }
