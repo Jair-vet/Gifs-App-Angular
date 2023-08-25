@@ -14,6 +14,6 @@ export class GifsService {
 
     searchTag( tag: string ):void{
         this._tagsHistory.unshift( tag )  // Agregar el Tag
-        
+        // console.log( this.tagsHistory );
     }
 }
