@@ -9,6 +9,11 @@ export class GifsService {
     constructor() { }
 
     get tagsHistory() {
-        return this._tagsHistory
+        return [...this._tagsHistory]
+    }
+
+    searchTag( tag: string ):void{
+        this._tagsHistory.unshift( tag )  // Agregar el Tag
+        
     }
 }
