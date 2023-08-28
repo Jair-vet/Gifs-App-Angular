@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SearchBoxComponent } from 'src/app/gifs/components/search-box/search-box.component';
+import { Gif } from 'src/app/gifs/interfaces/gifs.interfaces';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
@@ -14,7 +16,13 @@ export class SidebarComponent {
     return this.gifsService.tagsHistory
     
   }
+  public gifs: Gif[] = []
 
+  searchTag( tag: string ) {
+    this.gifsService.searchTag( tag )
+  }
   
 
 }
+
+
