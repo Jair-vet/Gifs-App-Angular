@@ -2,11 +2,16 @@
     <div *ngFor="let gif of gifs" class="col-md-3 col-sm-6">
         <div class="text-center card mb-2 bg-dark">
            
-            <!-- TODO: Crear imagen -->
+            <!-- Crear imagen -->
+            <img 
+                [src]="gif.images.downsized_medium.url" 
+                [alt]="gif.title"
+                class="card-img-top h-150px"
+            />
 
 
-            <div class="card-body text-white">
-                <p class="card-text">Hola Mundo</p>
+            <div class="card-body text-white height-200px">
+                <p class="card-text">{{ gif.title }} </p>
             </div>
         </div>
     </div>
