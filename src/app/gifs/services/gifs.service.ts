@@ -27,6 +27,9 @@ export class GifsService {
         if( !localStorage.getItem('history') ) return // No Tenemos data
 
         this._tagsHistory = JSON.parse( localStorage.getItem('history')! )
+
+        if( this._tagsHistory.length === 0) return
+        this.searchTag( this._tagsHistory[0] )
     }
 
     // Si ya existe el tag entonces lo borramos del Final y lo insertamos al Inicio
